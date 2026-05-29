@@ -1,3 +1,446 @@
 {
-  "templates": []
+  "templates": [
+    {
+      "id": "mp6a7wea-hqg3p57f",
+      "name": "dooh_device_register_upload_template",
+      "fields": [
+        {
+          "id": "mp69w0sj-w4gph60m",
+          "name": "deviceId",
+          "type": "increment_string",
+          "sample": "device010-S128538103",
+          "config": {
+            "prefix": "PODO_Woonam_",
+            "start": 1,
+            "padding": 5,
+            "suffix": "-S128542582"
+          }
+        },
+        {
+          "id": "mp69w0sj-4w1hz7yy",
+          "name": "device_name",
+          "type": "increment_string",
+          "sample": "DeviceName",
+          "config": {
+            "prefix": "PODO_Woonam_",
+            "suffix": "",
+            "start": 1,
+            "padding": 5
+          }
+        },
+        {
+          "id": "mp69w0sj-xjy5ivj5",
+          "name": "device_tags",
+          "type": "fixed",
+          "sample": "tag1;tag2;tag3",
+          "config": {
+            "value": "TEST"
+          }
+        },
+        {
+          "id": "mp69w0sj-kpde07k0",
+          "name": "status",
+          "type": "fixed",
+          "sample": "ON",
+          "config": {
+            "value": "ON"
+          }
+        },
+        {
+          "id": "mp69w0sj-pf5bgdda",
+          "name": "holiday_use",
+          "type": "fixed",
+          "sample": "1",
+          "config": {
+            "value": "1"
+          }
+        },
+        {
+          "id": "mp69w0sj-yde8i1r6",
+          "name": "mon_stime",
+          "type": "fixed",
+          "sample": "0900",
+          "config": {
+            "value": "1000"
+          }
+        },
+        {
+          "id": "mp69w0sj-c7ho8f5m",
+          "name": "mon_etime",
+          "type": "fixed",
+          "sample": "2300",
+          "config": {
+            "value": "2300"
+          }
+        },
+        {
+          "id": "mp69w0sj-gwgxe01k",
+          "name": "tue_stime",
+          "type": "fixed",
+          "sample": "0900",
+          "config": {
+            "value": "1000"
+          }
+        },
+        {
+          "id": "mp69w0sj-rjlifjf0",
+          "name": "tue_etime",
+          "type": "fixed",
+          "sample": "2300",
+          "config": {
+            "value": "2300"
+          }
+        },
+        {
+          "id": "mp69w0sj-aa9z8fq8",
+          "name": "wed_stime",
+          "type": "fixed",
+          "sample": "0900",
+          "config": {
+            "value": "1000"
+          }
+        },
+        {
+          "id": "mp69w0sj-olt41flv",
+          "name": "wed_etime",
+          "type": "fixed",
+          "sample": "2300",
+          "config": {
+            "value": "2300"
+          }
+        },
+        {
+          "id": "mp69w0sj-nze4pep1",
+          "name": "thu_stime",
+          "type": "fixed",
+          "sample": "0900",
+          "config": {
+            "value": "1000"
+          }
+        },
+        {
+          "id": "mp69w0sj-kifyiqjp",
+          "name": "thu_etime",
+          "type": "fixed",
+          "sample": "2300",
+          "config": {
+            "value": "2300"
+          }
+        },
+        {
+          "id": "mp69w0sj-1ryij83m",
+          "name": "fri_stime",
+          "type": "fixed",
+          "sample": "0900",
+          "config": {
+            "value": "1000"
+          }
+        },
+        {
+          "id": "mp69w0sj-kg7kjrf1",
+          "name": "fri_etime",
+          "type": "fixed",
+          "sample": "2300",
+          "config": {
+            "value": "2300"
+          }
+        },
+        {
+          "id": "mp69w0sj-9pmvfw11",
+          "name": "sat_stime",
+          "type": "fixed",
+          "sample": "0900",
+          "config": {
+            "value": "1000"
+          }
+        },
+        {
+          "id": "mp69w0sj-k3ycw9fp",
+          "name": "sat_etime",
+          "type": "fixed",
+          "sample": "2300",
+          "config": {
+            "value": "2300"
+          }
+        },
+        {
+          "id": "mp69w0sj-yardq9ym",
+          "name": "sun_stime",
+          "type": "fixed",
+          "sample": "0900",
+          "config": {
+            "value": "1000"
+          }
+        },
+        {
+          "id": "mp69w0sj-t3qmg6w2",
+          "name": "sun_etime",
+          "type": "fixed",
+          "sample": "2300",
+          "config": {
+            "value": "2300"
+          }
+        },
+        {
+          "id": "mp69w0sj-98eqzn98",
+          "name": "total_slot_count",
+          "type": "fixed",
+          "sample": "15",
+          "config": {
+            "value": ""
+          }
+        },
+        {
+          "id": "mp69w0sj-iowe07g5",
+          "name": "available_slot_count",
+          "type": "fixed",
+          "sample": "10",
+          "config": {
+            "value": ""
+          }
+        },
+        {
+          "id": "mp69w0sj-j0vqk8zg",
+          "name": "creative_diversity",
+          "type": "fixed",
+          "sample": "HIGH",
+          "config": {
+            "value": "HIGH"
+          }
+        },
+        {
+          "id": "mp69w0sj-rb9m7y3y",
+          "name": "allocated_storage",
+          "type": "fixed",
+          "sample": "15",
+          "config": {
+            "value": "1"
+          }
+        },
+        {
+          "id": "mp69w0sj-e446jxnz",
+          "name": "supported_formats",
+          "type": "fixed",
+          "sample": "VIDEO;IMAGE",
+          "config": {
+            "value": "VIDEO;IMAGE"
+          }
+        },
+        {
+          "id": "mp69w0sj-tl38yofq",
+          "name": "supported_sizes",
+          "type": "fixed",
+          "sample": "1080x1920;800x1080",
+          "config": {
+            "value": "640x360"
+          }
+        },
+        {
+          "id": "mp69w0sj-kaiznv1r",
+          "name": "screen_resolution",
+          "type": "fixed",
+          "sample": "1920x1080",
+          "config": {
+            "value": "640x360"
+          }
+        },
+        {
+          "id": "mp69w0sj-g1y91n0a",
+          "name": "screen_size_inch",
+          "type": "fixed",
+          "sample": "19",
+          "config": {
+            "value": ""
+          }
+        },
+        {
+          "id": "mp69w0sj-lyv3iysb",
+          "name": "latitude",
+          "type": "fixed",
+          "sample": "37.591191",
+          "config": {
+            "value": "37.4954"
+          }
+        },
+        {
+          "id": "mp69w0sj-ghe63nit",
+          "name": "longitude",
+          "type": "fixed",
+          "sample": "127.015767",
+          "config": {
+            "value": "127.0334"
+          }
+        },
+        {
+          "id": "mp69w0sj-bavwauxv",
+          "name": "ip_address",
+          "type": "fixed",
+          "sample": "127.0.0.1",
+          "config": {
+            "value": ""
+          }
+        }
+      ],
+      "originalFileName": "dooh_device_register_upload_template (4).csv",
+      "createdAt": "2026-05-15T02:12:10.306Z",
+      "updatedAt": "2026-05-15T02:12:10.307Z"
+    },
+    {
+      "id": "mpc80bh9-9ktllj78",
+      "name": "사용자_요청_202605151600",
+      "fields": [
+        {
+          "id": "mpc8006t-hl3rtb5z",
+          "name": "상태",
+          "type": "fixed",
+          "sample": "대기 중",
+          "config": {
+            "value": "대기 중"
+          }
+        },
+        {
+          "id": "mpc8006t-xf2kzu91",
+          "name": "요청 유형",
+          "type": "fixed",
+          "sample": "사용자 등록",
+          "config": {
+            "value": "사용자 등록"
+          }
+        },
+        {
+          "id": "mpc8006t-079fq8zg",
+          "name": "ID",
+          "type": "fixed",
+          "sample": "69fda9fbc10b1f4bbe23e5cc",
+          "config": {
+            "value": "69fda9fbc10b1f4bbe23e5cc"
+          }
+        },
+        {
+          "id": "mpc8006u-eguu243a",
+          "name": "이름",
+          "type": "fixed",
+          "sample": "Account creation request",
+          "config": {
+            "value": "Account creation request"
+          }
+        },
+        {
+          "id": "mpc8006u-3amnw4if",
+          "name": "요청 메시지",
+          "type": "fixed",
+          "sample": "requested account creation.",
+          "config": {
+            "value": "requested account creation."
+          }
+        },
+        {
+          "id": "mpc8006u-6mexrs8k",
+          "name": "국가",
+          "type": "fixed",
+          "sample": "대한민국",
+          "config": {
+            "value": "대한민국"
+          }
+        },
+        {
+          "id": "mpc8006u-k6sdwsr8",
+          "name": "대행사",
+          "type": "fixed",
+          "sample": "NAVER Corp",
+          "config": {
+            "value": "NAVER Corp"
+          }
+        },
+        {
+          "id": "mpc8006u-6dm558t4",
+          "name": "퍼블리셔",
+          "type": "fixed",
+          "sample": "",
+          "config": {
+            "value": ""
+          }
+        },
+        {
+          "id": "mpc8006u-urs1d5tg",
+          "name": "대상",
+          "type": "fixed",
+          "sample": "사용자",
+          "config": {
+            "value": "사용자"
+          }
+        },
+        {
+          "id": "mpc8006u-niqdk0zg",
+          "name": "대상 항목 ID",
+          "type": "fixed",
+          "sample": "",
+          "config": {
+            "value": ""
+          }
+        },
+        {
+          "id": "mpc8006u-d0zj5o6q",
+          "name": "요청자",
+          "type": "fixed",
+          "sample": "zhang.wanlu@navercorp.com",
+          "config": {
+            "value": "zhang.wanlu@navercorp.com"
+          }
+        },
+        {
+          "id": "mpc8006u-wqirajap",
+          "name": "처리자",
+          "type": "fixed",
+          "sample": "-",
+          "config": {
+            "value": "-"
+          }
+        },
+        {
+          "id": "mpc8006u-940xoc4c",
+          "name": "등록 일시",
+          "type": "increment_string",
+          "sample": "2026.05.08 18:16:43",
+          "config": {
+            "prefix": "2026.05.08 18:16:",
+            "start": 43,
+            "padding": 2
+          }
+        },
+        {
+          "id": "mpc8006u-n6gpyxpm",
+          "name": "등록자",
+          "type": "fixed",
+          "sample": "zhang.wanlu@navercorp.com",
+          "config": {
+            "value": "zhang.wanlu@navercorp.com"
+          }
+        },
+        {
+          "id": "mpc8006u-3gqsqmvk",
+          "name": "수정 일시",
+          "type": "increment_string",
+          "sample": "2026.05.08 18:16:43",
+          "config": {
+            "prefix": "2026.05.08 18:16:",
+            "start": 43,
+            "padding": 2
+          }
+        },
+        {
+          "id": "mpc8006u-kkj2aera",
+          "name": "변경자",
+          "type": "fixed",
+          "sample": "zhang.wanlu@navercorp.com",
+          "config": {
+            "value": "zhang.wanlu@navercorp.com"
+          }
+        }
+      ],
+      "originalFileName": "사용자_요청_202605151600.csv",
+      "createdAt": "2026-05-19T05:56:54.429Z",
+      "updatedAt": "2026-05-19T05:56:54.431Z"
+    }
+  ]
 }

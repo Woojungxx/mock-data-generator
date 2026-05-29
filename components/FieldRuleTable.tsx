@@ -42,6 +42,7 @@ function defaultConfig(type: FieldType, prev: FieldRule): FieldRuleConfig {
     case "increment_string":
       return {
         prefix: prev.config.prefix ?? "device_",
+        suffix: prev.config.suffix ?? "",
         start: prev.config.start ?? 1,
         padding: prev.config.padding ?? 4,
       };
@@ -185,31 +186,41 @@ function ConfigEditors({
       );
     case "increment_string":
       return (
-        <div className="grid gap-2 sm:grid-cols-3">
-          <div className="sm:col-span-1">
-            <span className="text-xs text-muted-foreground">prefix</span>
-            <Input
-              value={field.config.prefix ?? ""}
-              onChange={(e) => onPatch({ prefix: e.target.value })}
-              placeholder="device_"
-            />
+        <div className="flex flex-col gap-2">
+          <div className="grid gap-2 sm:grid-cols-3">
+            <div className="sm:col-span-1">
+              <span className="text-xs text-muted-foreground">prefix（递增数字前）</span>
+              <Input
+                value={field.config.prefix ?? ""}
+                onChange={(e) => onPatch({ prefix: e.target.value })}
+                placeholder="PODO_Woonam_"
+              />
+            </div>
+            <div>
+              <span className="text-xs text-muted-foreground">起始数字</span>
+              <Input
+                type="number"
+                value={field.config.start ?? 1}
+                onChange={(e) => onPatch({ start: Number(e.target.value) })}
+              />
+            </div>
+            <div>
+              <span className="text-xs text-muted-foreground">数字位数（补零）</span>
+              <Input
+                type="number"
+                min={0}
+                max={32}
+                value={field.config.padding ?? 4}
+                onChange={(e) => onPatch({ padding: Number(e.target.value) })}
+              />
+            </div>
           </div>
           <div>
-            <span className="text-xs text-muted-foreground">start number</span>
+            <span className="text-xs text-muted-foreground">suffix（递增数字后，可选）</span>
             <Input
-              type="number"
-              value={field.config.start ?? 1}
-              onChange={(e) => onPatch({ start: Number(e.target.value) })}
-            />
-          </div>
-          <div>
-            <span className="text-xs text-muted-foreground">padding length</span>
-            <Input
-              type="number"
-              min={0}
-              max={32}
-              value={field.config.padding ?? 4}
-              onChange={(e) => onPatch({ padding: Number(e.target.value) })}
+              value={field.config.suffix ?? ""}
+              onChange={(e) => onPatch({ suffix: e.target.value })}
+              placeholder="-S1344366"
             />
           </div>
         </div>

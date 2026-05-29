@@ -27,9 +27,10 @@ export function computeCellValue(rule: FieldRule, rowIndex: number, rng: RandomS
     }
     case "increment_string": {
       const prefix = config.prefix ?? "";
+      const suffix = config.suffix ?? "";
       const start = config.start ?? 1;
       const padding = config.padding ?? 4;
-      return `${prefix}${padNum(start + rowIndex, padding)}`;
+      return `${prefix}${padNum(start + rowIndex, padding)}${suffix}`;
     }
     case "random_number": {
       const min = config.min ?? 0;

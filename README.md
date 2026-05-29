@@ -95,6 +95,61 @@ data/templates.json  # 模板持久化（可纳入版本控制或自行 .gitigno
 
 ---
 
+## 让别人也能用（不用各自 `npm run dev`）
+
+`npm run dev` 只适合本机开发。要给别人一个 **固定网址**，需要把项目 **部署到服务器或云平台**，对方只需用浏览器打开链接即可。
+
+### 方案一：Vercel（推荐，最简单）
+
+仓库已在 GitHub 时，约 5 分钟可上线：
+
+1. 打开 [vercel.com](https://vercel.com)，用 GitHub 登录  
+2. **Add New Project** → 选择 `Woojungxx/mock-data-generator`  
+3. 框架会自动识别为 Next.js，直接 **Deploy**  
+4. 完成后会得到类似 `https://mock-data-generator-xxx.vercel.app` 的地址，发给同事即可  
+
+之后每次 `git push` 到 `main`，Vercel 会自动重新部署。
+
+> **注意（模板保存）：** 当前模板写在服务器本地的 `data/templates.json`。Vercel 属于无状态/临时磁盘，**保存的模板在重新部署后可能丢失**，且不适合多实例长期持久化。若团队必须长期共用「已保存模板」，请用下面的方案二，或后续接入数据库 / 对象存储。
+
+### 方案二：公司内网或云主机（模板可长期保存）
+
+在一台大家都能访问的机器上（Windows 服务器、Linux VPS、内网虚拟机均可）：
+
+```bash
+git clone https://github.com/Woojungxx/mock-data-generator.git
+cd mock-data-generator
+npm install
+npm run build
+npm start
+```
+
+默认监听 **3000** 端口。把防火墙/安全组放行该端口，或前面加 Nginx 反代到 80/443，别人访问 `http://服务器IP:3000` 或你的域名即可。
+
+生产环境建议用 [PM2](https://pm2.keymetrics.io/) 保持进程常驻，例如：
+
+```bash
+npm install -g pm2
+pm2 start npm --name mock-data -- start
+pm2 save
+```
+
+此方式磁盘上的 `data/templates.json` **可以持久保存**（注意定期备份该文件）。
+
+### 方案三：仅内网、不对外网
+
+与方案二相同，但只绑定内网 IP，不暴露公网；适合 QA 团队在内网使用。
+
+### 对比（怎么选）
+
+| 方式 | 别人怎么用 | 模板能否长期保存 | 难度 |
+|------|------------|------------------|------|
+| 本机 `npm run dev` | 只能你自己 | 可以（本机文件） | 最低 |
+| Vercel | 发一个 https 链接 | 不稳定，易丢 | 低 |
+| 自建服务器 `npm start` | 发 IP/域名链接 | 可以 | 中 |
+
+---
+
 ## 常见问题
 
 **终端里 `next dev` 停在 “Ready in xs” 是否正常？**  

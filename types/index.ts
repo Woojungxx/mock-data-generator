@@ -18,6 +18,8 @@ export interface FieldRuleConfig {
   step?: number;
   /** increment_string */
   prefix?: string;
+  /** 递增数字之后的固定片段，例如 "-S1344366" */
+  suffix?: string;
   padding?: number;
   /** random_number */
   min?: number;
